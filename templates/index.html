@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}
+      HOME
+    {% endblock title %}
+{% block body %}
+    
+    <div class="container">
+      <h1>ADD A TODO</h1>
+      <form action="/" method="POST">
+        <div class="mb-3">
+          <label for="title1" class="form-label">Todo Title</label>
+          <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+         
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Todo Description</label>
+          <input type="text" name="desc"class="form-control" id="desc">
+        </div>
+      
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+    <div class="container my-3">
+      <h1 >YOUR TODOS</h1>
+    
+          {% if allTodo|length==0  %}
+
+           <!-- <h4 style="color:cornflowerblue"></h4> -->
+           <div class="alert alert-primary" role="alert">
+            NO RECORD FOUND ADD YOUR FIRST TODO NOW
+          </div>
+          {% else %}
+            
+       
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">SNO</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Time</th>
+                <th scope="col">       Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+          {% for todo in allTodo   %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{todo.title}}</td>
+            <td>{{todo.desc}}</td>
+            <td>{{todo.date_created}}</td>
+            <td> 
+             
+              <a href="/update/{{todo.sno}}"><button type="button" class="btn btn-outline-dark btn-sn mx-1">Update</button></a>  
+              <a href="/delete/{{todo.sno}}"><button type="button" class="btn btn-outline-dark btn-sn mx-1">Delete</button></a>
+          </tr>
+          {% endfor %}
+          
+        </tbody>
+      </table>
+          {% endif %}
+       
+    </div>
+  
+    {% endblock body %}

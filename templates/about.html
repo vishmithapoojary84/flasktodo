@@ -1,0 +1,112 @@
+
+{% extends 'base.html' %}
+{% block body %}
+      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About - To-Do Website</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+section#about {
+    padding: 20px;
+    background-color: white;
+    max-width: 900px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#about h1 {
+    color: #333;
+}
+
+section#about h2 {
+    color: #444;
+}
+
+section#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+section#about ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+  
+
+    <!-- About Section -->
+    <section id="about">
+      <h1>About This To-Do Website</h1>
+      <p>Welcome to my personal To-Do website! This project was created as a way to help you manage tasks, stay organized, and keep track of your daily goals. As a solo developer, I wanted to build a simple, easy-to-use platform that can help people like you get things done efficiently.</p>
+      
+      <h2>My Story</h2>
+      <p>I built this website out of a personal need to stay organized. As someone juggling multiple tasks, I realized there was a need for a simple tool that could help me stay on top of my daily to-do list. Rather than using complex task management systems, I wanted something straightforward and user-friendly. And that's how this website came to life!</p>
+
+      <h2>Features</h2>
+      <ul>
+          <li>Create, edit, and delete tasks</li>
+          <li>Set due dates and deadlines</li>
+          <li>Simple, minimalistic design</li>
+          <li>Track your progress and stay productive</li>
+      </ul>
+
+      <h2>Vision</h2>
+      <p>My vision for this website is to offer a tool that simplifies task management without unnecessary complexity. I believe staying organized should be easy and accessible to everyone, and that's the goal of this project — to make task management as simple as possible!</p>
+  </section>
+
+
+    <!-- Footer -->
+
+</body>
+</html>
+{% endblock body %}
